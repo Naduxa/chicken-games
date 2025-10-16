@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ChickenGames — Indie Game Studio</title>
-  <meta name="description" content="ChickenGames — независимая игровая студия: казуальные хиты, гонки и стильный геймдизайн.">
+  <meta name="description" content="ChickenGames — независимая студия: казуальные хиты, гонки и чистый геймдизайн.">
   <meta property="og:title" content="ChickenGames — Indie Game Studio">
   <meta property="og:description" content="Игры, в которые хочется возвращаться.">
   <meta property="og:image" content="assets/og-image.png">
@@ -27,75 +27,51 @@
         <div class="size-9 rounded-xl bg-gradient-to-br from-yellow-400 to-rose-500 grid place-items-center shadow-[0_0_40px_-10px] shadow-rose-500/30"><span class="text-xl">🐔</span></div>
         <div class="leading-tight">
           <div class="text-2xl sm:text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-amber-600 to-rose-500 drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]">ChickenGames</div>
-          <div class="text-xs text-stone-600">Indie Game Studio</div>
+          <div class="text-xs text-stone-600" data-i18n="indie">Indie Game Studio</div>
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-stone-700" href="#games">Игры</a>
-        <a class="hover:text-stone-700" href="#about">О студии</a>
-        <a class="hover:text-stone-700" href="#contact">Контакты</a>
+        <a class="hover:text-stone-700" href="#games" data-i18n="nav_games">Игры</a>
+        <a class="hover:text-stone-700" href="#about" data-i18n="nav_about">О студии</a>
+        <a class="hover:text-stone-700" href="#contact" data-i18n="nav_contact">Контакты</a>
       </nav>
-      <a href="#games" class="hidden sm:inline-flex rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 text-white px-5 py-2.5 text-sm font-semibold shadow-[0_8px_20px_rgba(244,114,182,0.35)] hover:from-rose-600 hover:to-amber-600 active:translate-y-[1px] transition">Смотреть игры</a>
+      <div class="flex items-center gap-3">
+        <a href="#games" class="hidden sm:inline-flex rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 text-white px-4 py-2 text-sm font-semibold shadow-[0_8px_20px_rgba(244,114,182,0.35)] hover:from-rose-600 hover:to-amber-600 active:translate-y-[1px] transition" data-i18n="cta_games">Смотреть игры</a>
+        <button id="langBtn" class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white/70 backdrop-blur px-3 py-1.5 text-xs font-semibold text-stone-700 hover:bg-white" title="Switch language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm0 0v20M2 12h20" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span id="langLabel">RU</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="home" class="relative">
+  <section id="home" class="relative">а
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
           <h1 class="text-5xl sm:text-6xl/tight font-extrabold tracking-tight">
-            Игры, в которые <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-500">хочется возвращаться</span>
+            <span data-i18n="hero_title_pre">Игры, в которые</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-500"> <span data-i18n="hero_title_span">хочется возвращаться</span></span>
           </h1>
-          <p class="mt-5 text-stone-700 max-w-prose">
-            ChickenGames — независимая студия, создающая стильные казуальные и гоночные проекты. Мы делаем геймплей понятным с первых секунд и глубоким на долгие часы.
-          </p>
+          <p class="mt-5 text-stone-700 max-w-prose" data-i18n="hero_text">ChickenGames — независимая студия, создающая стильные казуальные и гоночные проекты. Мы делаем геймплей понятным с первых секунд и глубоким на долгие часы.</p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#games" class="rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 text-white px-6 py-3 text-sm font-semibold shadow-[0_8px_20px_rgba(244,114,182,0.35)] hover:from-rose-600 hover:to-amber-600 active:translate-y-[1px] transition">Наши игры</a>
-            <a href="#contact" class="rounded-2xl border border-stone-300/80 bg-white/60 backdrop-blur px-6 py-3 text-sm font-semibold hover:bg-white transition shadow-[0_8px_20px_rgba(0,0,0,0.04)]">Партнёрствам и прессе</a>
+            <a href="#games" class="rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 text-white px-6 py-3 text-sm font-semibold shadow-[0_8px_20px_rgba(244,114,182,0.35)] hover:from-rose-600 hover:to-amber-600 active:translate-y-[1px] transition" data-i18n="cta_games">Смотреть игры</a>
+            <a href="#contact" class="rounded-2xl border border-stone-300/80 bg-white/60 backdrop-blur px-6 py-3 text-sm font-semibold hover:bg-white transition shadow-[0_8px_20px_rgba(0,0,0,0.04)]" data-i18n="cta_press">Партнёрствам и прессе</a>
           </div>
 
           <ul class="mt-8 grid grid-cols-2 gap-4 text-sm text-stone-700">
-            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> Казуальные хиты</li>
-            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> Геймдизайн без мусора</li>
-            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> Быстрые релизы и апдейты</li>
-            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> Любовь к игрокам</li>
+            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> <span data-i18n="bullet1">Казуальные хиты</span></li>
+            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> <span data-i18n="bullet2">Геймдизайн без мусора</span></li>
+            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> <span data-i18n="bullet3">Быстрые релизы и апдейты</span></li>
+            <li class="flex items-center gap-2"><span class="inline-block size-1.5 rounded-full bg-stone-500"></span> <span data-i18n="bullet4">Любовь к игрокам</span></li>
           </ul>
         </div>
 
         <div class="relative">
           <div class="relative rounded-3xl overflow-hidden border border-stone-300 shadow-2xl bg-stone-50 card">
             <div class="relative p-6 sm:p-8">
-              <div class="grid grid-cols-2 gap-4">
-                <a href="https://www.crazygames.com/game/emoji-puzzle?bypassCache=lcd5o" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-                  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200">
-                    <img src="assets/emoji-puzzle.png" alt="Emoji Puzzle" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
-                  </div>
-                  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Emoji Puzzle</div>
-                  <div class="text-xs text-stone-700">Собирай смысл из эмодзи — легко начать, сложно оторваться.</div>
-                </a>
-                <a href="https://www.crazygames.com/game/drag-master?bypassCache=0qo5u" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-                  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200">
-                    <img src="assets/drag-master.png" alt="Drag Master" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
-                  </div>
-                  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Drag Master</div>
-                  <div class="text-xs text-stone-700">Реакция, тайминг, нитро. Драк-рейсинг без лишних слов.</div>
-                </a>
-                <a href="https://www.crazygames.com/game/racing-builder?bypassCache=h05jw" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-                  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200">
-                    <img src="assets/racing-builder.png" alt="Racing Builder" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
-                  </div>
-                  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Racing Builder</div>
-                  <div class="text-xs text-stone-700">Строй трассы — побеждай на своих правилах.</div>
-                </a>
-                <a href="https://www.crazygames.com/game/zombie-cafe?bypassCache=iasbn" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-                  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200">
-                    <img src="assets/zombie-cafe.png" alt="Zombie Cafe" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
-                  </div>
-                  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Zombie Cafe</div>
-                  <div class="text-xs text-stone-700">Кафе, где гости — зомби. Успей накормить, пока не поздно!</div>
-                </a>
-              </div>
+              <div id="heroGames" class="grid grid-cols-2 gap-4"></div>
             </div>
           </div>
         </div>
@@ -107,31 +83,10 @@
   <section id="games" class="relative py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-start">
-        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase">Наши игры</div>
-        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Выбирайте настроение — от головоломок до гонок</h2>
+        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase" data-i18n="games_title">Наши игры</div>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight" data-i18n="games_sub">Выбирайте настроение — от головоломок до гонок</h2>
       </div>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <a href="https://www.crazygames.com/game/emoji-puzzle?bypassCache=lcd5o" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200"><img src="assets/emoji-puzzle.png" alt="Emoji Puzzle" class="w-full h-full object-cover"/></div>
-  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Emoji Puzzle</div>
-  <div class="text-xs text-stone-700">Собирай смысл из эмодзи — легко начать, сложно оторваться.</div>
-</a>
-<a href="https://www.crazygames.com/game/drag-master?bypassCache=0qo5u" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200"><img src="assets/drag-master.png" alt="Drag Master" class="w-full h-full object-cover"/></div>
-  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Drag Master</div>
-  <div class="text-xs text-stone-700">Реакция, тайминг, нитро. Драк-рейсинг без лишних слов.</div>
-</a>
-<a href="https://www.crazygames.com/game/racing-builder?bypassCache=h05jw" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200"><img src="assets/racing-builder.png" alt="Racing Builder" class="w-full h-full object-cover"/></div>
-  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Racing Builder</div>
-  <div class="text-xs text-stone-700">Строй трассы — побеждай на своих правилах.</div>
-</a>
-<a href="https://www.crazygames.com/game/zombie-cafe?bypassCache=iasbn" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
-  <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200"><img src="assets/zombie-cafe.png" alt="Zombie Cafe" class="w-full h-full object-cover"/></div>
-  <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">Zombie Cafe</div>
-  <div class="text-xs text-stone-700">Кафе, где гости — зомби. Успей накормить, пока не поздно!</div>
-</a>
-      </div>
+      <div id="gamesGrid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
     </div>
   </section>
 
@@ -139,17 +94,15 @@
   <section id="about" class="relative py-16 md:py-24 border-t border-stone-300">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-start">
-        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase">О студии</div>
-        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Маленькая команда, большие амбиции</h2>
+        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase" data-i18n="about_title">О студии</div>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight" data-i18n="about_sub">Маленькая команда, большие амбиции</h2>
       </div>
-      <div class="mt-6 text-stone-800 leading-relaxed">
-        Мы экспериментируем с механиками, быстро валидируем прототипы и доводим удачные концепты до полировки. Для нас важны: сильная первая минута, чистый визуал и уважение к времени игрока.
-      </div>
+      <div class="mt-6 text-stone-800 leading-relaxed" data-i18n="about_text">Мы экспериментируем с механиками, быстро валидируем прототипы и доводим удачные концепты до полировки. Для нас важны: сильная первая минута, чистый визуал и уважение к времени игрока.</div>
       <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm text-stone-700">
-        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800">🕹️ Казуал & аркада</div>
-        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800">⚡ Быстрые апдейты</div>
-        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800">🎨 Чистая эстетика</div>
-        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800">🤝 Открыты коллаборациям</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800" data-i18n="badge1">🕹️ Казуал & аркада</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800" data-i18n="badge2">⚡ Быстрые апдейты</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800" data-i18n="badge3">🎨 Чистая эстетика</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-stone-50 px-3 py-1 text-stone-800" data-i18n="badge4">🤝 Открыты коллаборациям</div>
       </div>
     </div>
   </section>
@@ -158,27 +111,194 @@
   <section id="contact" class="relative py-16 md:py-24 border-t border-stone-300">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-start">
-        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase">Партнёрам и прессе</div>
-        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Напишите нам — ответим быстро</h2>
+        <div class="text-xs font-semibold tracking-widest text-stone-600 uppercase" data-i18n="contact_title">Партнёрам и прессе</div>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight" data-i18n="contact_sub">Напишите нам — ответим быстро</h2>
       </div>
       <div class="mt-8 rounded-3xl border border-stone-300 bg-stone-50 p-6 sm:p-8 card">
         <div class="grid sm:grid-cols-2 gap-6">
-          <div><div class="text-sm text-stone-600">Telegram</div><a href="https://t.me/dimonk95k" target="_blank" rel="noopener" class="text-lg font-semibold hover:opacity-90">@dimonk95k</a></div>
+          <div><div class="text-sm text-stone-600" data-i18n="contact_tg">Telegram</div><a href="https://t.me/dimonk95k" target="_blank" rel="noopener" class="text-lg font-semibold hover:opacity-90">@dimonk95k</a></div>
         </div>
-        <div class="mt-6 text-sm text-stone-700">Пресс‑кит и билды предоставляем по запросу.</div>
+        <div class="mt-6 text-sm text-stone-700" data-i18n="contact_note">Пресс‑кит и билды предоставляем по запросу.</div>
       </div>
     </div>
   </section>
 
   <footer class="border-t border-stone-300">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-xs text-stone-600">
-      <div>© <span id="year"></span> ChickenGames. Все права защищены.</div>
-      <div class="hidden sm:block">Сделано с любовью к игрокам 🐔</div>
+      <div>© <span id="year"></span> ChickenGames. <span data-i18n="rights">Все права защищены.</span></div>
+      <div class="hidden sm:block" data-i18n="made_with_love">Сделано с любовью к игрокам 🐔</div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+// ---- i18n dictionary ----
+const DICT = {
+  ru: {
+    indie: "Indie Game Studio",
+    nav_games: "Игры",
+    nav_about: "О студии",
+    nav_contact: "Контакты",
+    cta_games: "Смотреть игры",
+    cta_press: "Партнёрствам и прессе",
+    hero_title_pre: "Игры, в которые",
+    hero_title_span: "хочется возвращаться",
+    hero_text: "ChickenGames — независимая студия, создающая стильные казуальные и гоночные проекты. Мы делаем геймплей понятным с первых секунд и глубоким на долгие часы.",
+    bullet1: "Казуальные хиты",
+    bullet2: "Геймдизайн без мусора",
+    bullet3: "Быстрые релизы и апдейты",
+    bullet4: "Любовь к игрокам",
+    games_title: "Наши игры",
+    games_sub: "Выбирайте настроение — от головоломок до гонок",
+    about_title: "О студии",
+    about_sub: "Маленькая команда, большие амбиции",
+    about_text: "Мы экспериментируем с механиками, быстро валидируем прототипы и доводим удачные концепты до полировки. Для нас важны: сильная первая минута, чистый визуал и уважение к времени игрока.",
+    badge1: "🕹️ Казуал & аркада",
+    badge2: "⚡ Быстрые апдейты",
+    badge3: "🎨 Чистая эстетика",
+    badge4: "🤝 Открыты коллаборациям",
+    contact_title: "Партнёрам и прессе",
+    contact_sub: "Напишите нам — ответим быстро",
+    contact_email: "Почта",
+    contact_tg: "Telegram",
+    contact_note: "Пресс‑кит и билды предоставляем по запросу.",
+    rights: "Все права защищены.",
+    made_with_love: "Сделано с любовью к игрокам 🐔",
+    play_btn: "Играть на CrazyGames",
+  },
+  en: {
+    indie: "Indie Game Studio",
+    nav_games: "Games",
+    nav_about: "About",
+    nav_contact: "Contacts",
+    cta_games: "See our games",
+    cta_press: "For partners & press",
+    hero_title_pre: "Games you",
+    hero_title_span: "want to come back to",
+    hero_text: "ChickenGames is an indie studio making stylish casual and racing titles. Easy to start, deep enough to binge.",
+    bullet1: "Casual hits",
+    bullet2: "Clean game design",
+    bullet3: "Fast updates",
+    bullet4: "Player‑first mindset",
+    games_title: "Our Games",
+    games_sub: "Pick your mood — from puzzles to racing",
+    about_title: "About",
+    about_sub: "Small team, big ambitions",
+    about_text: "We iterate fast on prototypes, polish the best concepts and respect the player's time: strong first minute, clean visuals, tight loops.",
+    badge1: "🕹️ Casual & arcade",
+    badge2: "⚡ Fast updates",
+    badge3: "🎨 Clean aesthetics",
+    badge4: "🤝 Open to collabs",
+    contact_title: "For partners & press",
+    contact_sub: "Write us — we reply fast",
+    contact_email: "Email",
+    contact_tg: "Telegram",
+    contact_note: "Press kit and builds on request.",
+    rights: "All rights reserved.",
+    made_with_love: "Made with love for players 🐔",
+    play_btn: "Play on CrazyGames",
+  }
+};
+
+// ---- games data ----
+const GAMES = [
+  {
+    title: "Emoji Puzzle",
+    url: "https://www.crazygames.com/game/emoji-puzzle?bypassCache=lcd5o",
+    image: "assets/emoji-puzzle.png",
+    tagline: {
+      ru: "Собирай смысл из эмодзи — легко начать, сложно оторваться.",
+      en: "Make sense out of emoji — easy to start, hard to stop."
+    }
+  },
+  {
+    title: "Drag Master",
+    url: "https://www.crazygames.com/game/drag-master?bypassCache=0qo5u",
+    image: "assets/drag-master.png",
+    tagline: {
+      ru: "Реакция, тайминг, нитро. Драк‑рейсинг без лишних слов.",
+      en: "Reaction, timing, nitro. Pure drag racing."
+    }
+  },
+  {
+    title: "Racing Builder",
+    url: "https://www.crazygames.com/game/racing-builder?bypassCache=h05jw",
+    image: "assets/racing-builder.png",
+    tagline: {
+      ru: "Строй трассы — побеждай на своих правилах.",
+      en: "Build tracks and win on your own rules."
+    }
+  },
+  {
+    title: "Zombie Cafe",
+    url: "https://www.crazygames.com/game/zombie-cafe?bypassCache=iasbn",
+    image: "assets/zombie-cafe.png",
+    tagline: {
+      ru: "Кафе, где гости — зомби. Успей накормить, пока не поздно!",
+      en: "A cafe for zombies. Serve them before it's too late!"
+    }
+  }
+];
+
+// ---- language detection / state ----
+const SUPPORTED = ["ru", "en"];
+function detectLang() {
+  try {
+    const saved = localStorage.getItem("chicken_lang");
+    if (saved && SUPPORTED.includes(saved)) return saved;
+  } catch {}
+  const nav = (navigator.language || "en").toLowerCase();
+  return nav.startsWith("ru") ? "ru" : "en";
+}
+
+let LANG = detectLang();
+document.documentElement.lang = LANG;
+
+function setLang(next) {
+  LANG = next;
+  try { localStorage.setItem("chicken_lang", LANG); } catch {}
+  document.documentElement.lang = LANG;
+  render();
+}
+
+// ---- render texts ----
+function i18nFill() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (key && DICT[LANG] && DICT[LANG][key]) {
+      el.textContent = DICT[LANG][key];
+    }
+  });
+  document.getElementById("langLabel").textContent = LANG === "ru" ? "RU" : "EN";
+}
+
+// ---- render games ----
+function gameCard(g) {
+  return `
+  <a href="${g.url}" target="_blank" rel="noopener" class="group rounded-2xl border border-stone-300 bg-stone-50 p-4 hover:border-stone-400 transition card">
+    <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-200">
+      <img src="${g.image}" alt="${g.title}" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
+    </div>
+    <div class="mt-3 font-semibold tracking-tight group-hover:opacity-90">${g.title}</div>
+    <div class="text-xs text-stone-700">${g.tagline[LANG]}</div>
+  </a>`;
+}
+
+function renderGames() {
+  const html = GAMES.map(gameCard).join("");
+  const hero = document.getElementById("heroGames");
+  const grid = document.getElementById("gamesGrid");
+  if (hero) hero.innerHTML = html;
+  if (grid) grid.innerHTML = html;
+}
+
+function render() {
+  i18nFill();
+  renderGames();
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("langBtn").addEventListener("click", () => setLang(LANG === "ru" ? "en" : "ru"));
+render();
+</script>
 </body>
 </html>
